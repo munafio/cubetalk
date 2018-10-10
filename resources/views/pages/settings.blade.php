@@ -17,37 +17,37 @@
 </ul>
 <br>
 <div class="tab-content">
-	{{-- =======================General section========================== --}}
+  {{-- =======================General section========================== --}}
 <div id="General" class="tab-pane fade-in active">
 @if(session()->has('general_msg'))
     <div class="alert alert-success">
         {{ session()->get('general_msg') }}
     </div>
     <script type="text/javascript">
-    	$(".tab-pane").removeClass("fade-in active");
-    	$("#General").addClass("fade-in active");
-    	$(".nav-link").removeClass("active");
-    	$("#General_link").addClass("active");
+      $(".tab-pane").removeClass("fade-in active");
+      $("#General").addClass("fade-in active");
+      $(".nav-link").removeClass("active");
+      $("#General_link").addClass("active");
     </script>
 @endif
 <form method="POST" action="{{ route('general_update') }}" enctype="multipart/form-data">
 @csrf
-	<div style="display: inline-flex;">
-    <div class="profile-avatar" id="settings_img_elm" style="margin: 10px; margin-top: 0; margin-bottom: 0;border-color: #fff; text-align: center;background-image: url('{{ url("/storage/avatar/".Auth::user()->avatar) }}');">
-	</div>
-	<p style="color: #a7aab5; font-size: 13px;padding: 25px 10px 25px 10px; margin: 0;">@lang("trans.preview")<br>@lang("trans.maxSize")</p>
-	</div>
+  <div style="display: inline-flex;">
+    <div class="profile-avatar" id="settings_img_elm" style="margin: 10px; margin-top: 0; margin-bottom: 0;border-color: #fff; text-align: center;background-image: url('@if(Auth::user()->avatar == "avatar.png") {{ url("/imgs/".Auth::user()->avatar) }} @else {{ url("/storage/avatar/".Auth::user()->avatar) }} @endif');">
+  </div>
+  <p style="color: #a7aab5; font-size: 13px;padding: 25px 10px 25px 10px; margin: 0;">@lang("trans.preview")<br>@lang("trans.maxSize")</p>
+  </div>
   <p style="border-bottom: 1px solid #dfe2e6;margin: 0; margin-top: 12px; margin-bottom: 12px;">
-  	<input type="file" name="avatar" style="display: none;" id="settings_img">
-  	<label for="settings_img" class="btn btn-success">@lang("trans.selectImage")</label>
-  	@if ($errors->has('avatar'))
+    <input type="file" name="avatar" style="display: none;" id="settings_img">
+    <label for="settings_img" class="btn btn-success">@lang("trans.selectImage")</label>
+    @if ($errors->has('avatar'))
         <span class="invalid-feedback" role="alert" style="display: block;">
             <strong>{{ $errors->first('avatar') }}</strong>
         </span>
   @endif
   </p>
   <div class="form-group">
-  	<label for="fullname">@lang("trans.fullname")</label>
+    <label for="fullname">@lang("trans.fullname")</label>
     <input type="text" class="form-control{{ $errors->has('fullname') ? ' is-invalid' : '' }}" name="fullname" placeholder="@lang("trans.fullname")" value="{{ $u->name }}">
     @if ($errors->has('fullname'))
         <span class="invalid-feedback" role="alert">
@@ -56,11 +56,11 @@
     @endif
   </div>
   <div class="form-group">
-  	<label for="username">@lang("trans.username") (@lang("trans.unchangeable"))</label>
+    <label for="username">@lang("trans.username") (@lang("trans.unchangeable"))</label>
     <label class="form-control" name="username" >{{ "@".$u->username }}</label>
   </div>
   <div class="form-group">
-  	<label for="email">@lang("trans.emailAddress")</label>
+    <label for="email">@lang("trans.emailAddress")</label>
     <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="@lang("trans.emailAddress")" value="{{ $u->email }}">
     @if ($errors->has('email'))
         <span class="invalid-feedback" role="alert">
@@ -71,19 +71,19 @@
   <button type="submit" class="btn btn-dark">@lang("trans.save_changes")</button>
   </form>
 </div>
-	{{-- =======================Change password section========================== --}}
+  {{-- =======================Change password section========================== --}}
 <div id="Change_password" class="tab-pane">
 @if($errors->has('cpassword') || $errors->has('password') || session()->has('password_msg') || session()->has('cpd_error'))
-	@if(session()->has('password_msg'))
-		<div class="alert alert-success">
-	        {{ session()->get('password_msg') }}
-	    </div>
-	@endif
+  @if(session()->has('password_msg'))
+    <div class="alert alert-success">
+          {{ session()->get('password_msg') }}
+      </div>
+  @endif
     <script type="text/javascript">
-    	$(".tab-pane").removeClass("fade-in active");
-    	$("#Change_password").addClass("fade-in active");
-    	$(".nav-link").removeClass("active");
-    	$("#Change_password_link").addClass("active");
+      $(".tab-pane").removeClass("fade-in active");
+      $("#Change_password").addClass("fade-in active");
+      $(".nav-link").removeClass("active");
+      $("#Change_password_link").addClass("active");
     </script>
 @endif
 <form method="POST" action="{{ route('password_update') }}" enctype="multipart/form-data">
@@ -115,14 +115,14 @@
   <button type="submit" class="btn btn-dark">@lang("trans.save_changes")</button>
  </form>
 </div>
-	{{-- =======================Delete Account========================== --}}
+  {{-- =======================Delete Account========================== --}}
 <div id="delete_account" class="tab-pane">
 @if(session()->has('delete_account'))
     <script type="text/javascript">
-    	$(".tab-pane").removeClass("fade-in active");
-    	$("#delete_account").addClass("fade-in active");
-    	$(".nav-link").removeClass("active");
-    	$("#delete_account_link").addClass("active");
+      $(".tab-pane").removeClass("fade-in active");
+      $("#delete_account").addClass("fade-in active");
+      $(".nav-link").removeClass("active");
+      $("#delete_account_link").addClass("active");
     </script>
 @endif
 <form method="POST" action="{{ route('delete_account') }}" enctype="multipart/form-data">

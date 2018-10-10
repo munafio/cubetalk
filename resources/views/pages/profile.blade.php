@@ -17,7 +17,7 @@
 		<a href="{{ url($u->username."/settings") }}" class="profile-edit"><span class="fas fa-user-edit"></span></a>
 		@endif
 		@endauth
-	<div class="profile-avatar" style="background-image: url('{{ url("/storage/avatar/".$u->avatar) }}');">
+	<div class="profile-avatar" style="background-image: url('@if($u->avatar == "avatar.png") {{ url("/imgs/".$u->avatar) }} @else {{ url("/storage/avatar/".$u->avatar) }} @endif');">
 	</div>
 	</div>
 	<div class="profile-userInfo" @if(App::isLocale('ar')) style="direction: ltr" @endif>
