@@ -39,9 +39,13 @@ Create a copy of `.env` file :
 ```
 $ php -r "file_exists('.env') || copy('.env.example', '.env');"
 ```
-Now we need to generate a key for the project :
+Generate a key for the project :
 ```
 $ php artisan key:generate
+```
+Now we need to migrate the tables to the database :
+```
+$ php artisan migrate
 ```
 last thing, we need to create s symlink for `storage` directory :
 ```
