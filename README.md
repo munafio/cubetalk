@@ -63,6 +63,27 @@ $ chmod -R 777 storage
 There is no diffrence about the installation on `localhost` or `shared hosting`, you can as simply install, prepare and develop the project on your `localhost` server and then deploy it on the `shared hosting`.
 You can find a lot of tutorails about how to deploy a laravel project on shared hosting on YouTube.
 
+## Important after installation
+After installing the application you need to edit `AuthenticatesUsers.php` file, to make login with `username` instead of `email` .
+#### How to do that?!
+It's very simple, open your editor and edit `AuthenticatesUsers.php` file in this path :
+`path/to/cubetalk/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php`
+and then search for `username()` function :
+``` php
+public function username()
+{
+    return 'email';
+}
+```
+and change it with the following :
+``` php
+public function username()
+{
+    return 'username';
+}
+```
+That's it :)
+
 ## Configurations
 Now all what you need is to set the general configurations of the application, Open the `.env` file and change `only` the following :
 ```
