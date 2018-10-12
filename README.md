@@ -8,6 +8,7 @@ Open source web application to send/receive anonymous feedback like (Sarahah/Say
 * Send a feedback contains a text or text with photo.
 * Comment on feedback.
 * Notifications about the new received feedbacks.
+* User verify system.
 * Share profile URL.
 * Delete post or comment.
 * Feedback privacy (Public/Private)
