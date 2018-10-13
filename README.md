@@ -19,7 +19,7 @@ Open source web application to send/receive anonymous feedback like (Sarahah/Say
 * Block, Report user
 
 ## Demo
-You can see a simple demo about this project and how it looks and works, <a href="#soon">Click here</a> to see a video on YouTube
+You can see a simple demo about this project and how it looks and works, <a href="https://www.youtube.com/watch?v=VzWNTynEtZ8">Click here</a> to see a video on YouTube
 
 ## Installation
 You can install the application as any other laravel projects, Easy to install on localhost or shared hosting :
