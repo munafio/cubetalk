@@ -122,8 +122,8 @@ This simple project built by [Munaf Aqeel Mahdi](https://github.com/munafaqeelma
 #### Contact me
 [Instagram](https://instagram.com/munafio) <br>
 [Facebook personal page](https://facebook.com/munaf.aqeel.m) <br>
-[Facebook official page](https://github.com/munafaqeelmahdi.official) <br>
-[Twitter](https://github.com/munaf_aqeel_m) <br>
+[Facebook official page](https://facebook.com/munafaqeelmahdi.official) <br>
+[Twitter](https://twitter.com/munaf_aqeel_m) <br>
 
 or on email [munafaqeelmahdi@gmail.com]
 
