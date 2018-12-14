@@ -117,7 +117,7 @@ The `.env` file not contains only these above lines of configurations! no, but t
 The Mail configuration, its important for sending [reset user password/activate emails], you need to set the email, username and password to allow the application sending emails under your email that you set.
 
 ## About the author
-This simple project built by [Munaf Aqeel Mahdi](https://github.com/munafaqeelmahdi)
+This simple project built by [Munaf Aqeel Mahdi](https://github.com/munafio)
 
 #### Contact me
 [Instagram](https://instagram.com/munafio) <br>
