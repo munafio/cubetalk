@@ -44,7 +44,7 @@ Generate a key for the project :
 ```
 $ php artisan key:generate
 ```
-Now we need to migrate the tables to the database (<b>First you need to edit database information and then do the following</b>):
+Now we need to migrate the tables to the database (<b>First you need to edit database information from `.env` file and then do the following</b>):
 ```
 $ php artisan migrate
 ```
