@@ -2,12 +2,13 @@
 Open source web application to send/receive anonymous feedback like (Sarahah/Sayat) built using Laravel PHP Framework.. Resposive on all devices, Simple and wonderfull design
 
 #### Features
-* Resposive on all devices.
-* Multi-language (EN, AR available by deffault) and you can add more languages.
+* Responsive on all devices.
+* Multi-language (EN, AR available by default) and you can add more languages.
 * RTL system.
 * Send a feedback contains a text or text with photo.
 * Comment on feedback.
-* Notifications about the new received feedbacks.
+* Notifications about the new received feedback.
+* Red border on the top of the sent message to show if he\she read it or not (Seen feature).
 * User verify system.
 * Share profile URL.
 * Delete post or comment.
